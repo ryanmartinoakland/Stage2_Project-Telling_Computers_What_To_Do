@@ -1,0 +1,999 @@
+
+
+<!DOCTYPE html>
+
+<!-- I didn't really take as thorough of notes as the notes that are provided for example, so i used a lot of the example notes just so i could demonstrate with my html code all the stuff we learned in the lesson -->
+<html class="whole-page">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>My UDACITY Nanodegree</title>
+		<meta charset="UTF-8">
+	</head>
+<body>
+	<img class="img1" src="images/me.jpg" alt="my mug">
+	<h1 class="title">
+		
+			Ryan's Nanodegree: Intro to Programming
+            <br>
+		    <br>
+		
+	</h1>
+ <font color="white"><u>STAGE ONE: Make Your Web Page</u> </font>
+<br><br>
+		<div class="lessonX lesson1">
+<b><u>Lesson 1: The Basics of the Web and HTML</u></b>
+<br><br>
+<em>How the Web Works</em> 
+<br>
+&nbsp;&nbsp;&nbsp;The web is a bunch of computers that communicate with each other. When a person goes to a web page like www.google.com, their computer sends a HTTP Request to a server.The server finds the appropriate HTML document and sends it back to the user's computer where a web browser interprets the page and displays it on the user's screen. This video does a good job of explaining more. 
+<br><br>
+<em>HTML:</em>
+<br>
+&nbsp;&nbsp;&nbsp;HTML stands for Hypertext Markup Language. HTML documents form the majority of the content on the web.HTML documents contain text content which describes "what you see" and markup which describes "how it looks". This video gives a good overview. 
+<br><br>
+<em>Tags and Elements:</em>
+<br>
+&nbsp;&nbsp;&nbsp;HTML documents are made of HTML elements. When writing HTML, we tell browsers the type of each element by using HTML tags. This video explains the distinction well. 
+<br><br>
+<em>Why Computers are Stupid:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Computers are stupid because they interpret instructions literally. This makes them very unforgiving since a small mistake by a programmer can cause huge problems in a program. 
+<br><br>
+<em>Inline vs Block Elements:</em> 
+<br>
+&nbsp;&nbsp;&nbsp;HTML elements are either inline or block. Block elements form an "invisible box" around the content inside of them. 
+<br>      
+       </div>  
+<br><br>
+
+       <div class="lessonX lesson2">
+<b><u>Lesson 2: Creating a Structured Document with HTML</u></b>
+<br><br>
+<em>Developer Tools (in the Browser):</em>
+<br> 
+&nbsp;&nbsp;&nbsp;HTML elements are either inline or block. Block elements form an "invisible box" around the content inside of them. 
+<br><br>
+<em>The "tree-like structure" of HTML:</em>
+<br> 
+&nbsp;&nbsp;&nbsp;The "tree-like structure" comes from the fact that HTML elements can have other elements inside of them. You can draw this relationship like a family tree. My mother had multiple children. So did her mother, and so on... In a browser, this structure shows up as a series of nested boxes. There are boxes inside of boxes inside of boxes, and so on... The relationship between indented HTML and boxes When you read an HTML document as text, you see a wave of changing indentations going up and down the left side of the document. The more indented an element is, the more deeply nested its corresponding "box" is. 
+<br><br>
+<em>Text Editors (for programming):</em>
+<br> 
+&nbsp;&nbsp;&nbsp;When writing code, programmers use special text editors (like Sublime Text for example). These editors make the programmer's life easier. For example, some text editors will automatically generate a closing HTML tag when you write an opening tag. 
+       </div>
+<br><br>
+
+		<div class="lessonX lesson3">
+<b><u>Lesson 3: Adding Style to Structure with CSS</u></b>
+<br><br>
+<em>In-page Styling vs. Linking to a CSS File:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Adding a link to a style sheet can be done in the head tags... by using "link". BUT, you can also apply style directly, without having to use a separate file and link tag. You can do so by using the style tags. 
+<br><br>
+<em>CSS Order Rules:</em>
+<br>
+&nbsp;&nbsp;&nbsp;You can also think about CSS as a search and replace tool: you identify a class or a tag of the element you want to find (or match, in CSS terminology), and then what you want to do with it, or what property values to replace with different ones. 
+<br><br>
+<em>Order Matters:</em>
+<br>
+&nbsp;&nbsp;&nbsp;It also matters where you define the rules and in what order they are applied. Styles can be defined in different places and are applied in order, with definitions further down the list overwriting previous definitions: 
+<br><br>
+<em>Specifics Matter:</em>
+<br>
+&nbsp;&nbsp;&nbsp;"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more specific rule takes effect. In general, descendant elements inherit text-related properties, but box-related properties are not inherited. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index. Inheritance prevents certain properties from being declared over and over again in a style sheet, allowing the software developers to write less CSS. It enhances faster-loading of web pages by users and enables the clients to save money on bandwidth and development costs. 
+<br><br>
+<em>Using the right elements:</em>
+<br>
+&nbsp;&nbsp;&nbsp;When creating HTML and CSS for your page, your elements should choose the right element for the right content. As an example, if you have a title to an article, that's only text. In HTML, instead of using a DIV tag, it would be more appropriate to use the H1 tag, as that is meant for text/titles. (Especially when your webpage is indexed by search engines) Another reason to do so, relates back to inheritance. You can apply styling to the H1 tag as an example, and wrap the H1 element in a DIV tag with different styling. It's a way to add even more control over styling of each page element. (But be cautious, this can get out of hand pretty quick.) 
+<br><br>
+<em>Box Models:</em>
+<br>
+&nbsp;&nbsp;&nbsp;The box model is important to understand.The "content" can be text or an image... whatever. Around that is the padding, then the border, then the margin. Each of these can be controlled in CSS, and also each behave a bit differently. The margin, border, and padding can have their own attributes, including color, style, width, and so on. The CSS reference page is a big help here, because there are a lot of things you can do to each.
+<br><br>
+<em>Wide Boxes:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Keeping the box model in mind, there are a few things to know. Each of the 'boxes' (margin, border, padding, and the content) all have width. Now, you don't *have* to assign a width value to them, but the content will always have width. If you do plan to use padding, and set width values, be mindful that they all add up. So in other words, if you assign a width to each, you have to total those all up, and that's how much actual width your element will use on a page. One way around having to constantly calculate how much width is used, you can use the CSS style called "box-sizing: border-box;" This allows you to set the box width, and it will auto-adjust it. (It doesn't include the margin in this though) 
+There is a small problem to using this -- older browsers don't support this CSS style. By using browser-specific code/prefixes for the box-sizing style, you can get around it, but it's not perfect (yet). Another way to handle box sizing, is to use percentages for the sizing. It adjusts the sizing based on the size of your screen or browser window. But there are limitations to this as well. If you resize too large or too small, because it's based on percentage, this could have some unexpected effects.
+But, there is a way to combat this as well. You can use 'max-width' styling in CSS, so when resizing, or if viewed on a screen larger than you expected, it will prevent the page from expanding too far and looking strange. 
+<br><br>
+<em>Test and Revise:</em>
+<br>
+&nbsp;&nbsp;&nbsp;When writing code, you will need to test your work to see if it actually does what you expect it to. It's also standard practice in software development, since a bug can make or break your program (or in the case of web design, can cause your page to display really weird, or not at all)Whenever possible, view your site in other browsers... Firefox, IE, on your iPad or Android device... this will give you a really good idea of how your code works and how it works in other environments. 
+<br><br>
+<em>Validate</em>
+<br>
+&nbsp;&nbsp;&nbsp;Both HTML and CSS have a specific format that they need to be written in to work. The browser does it's best to interperet and display the page even if you don't quite get your HTML and CSS 100% correct. 
+<br><br>
+To verify HTML:
+<br><a href="http://validator.w3.org/#validate_by_input"> The validator for HTML can be found here.</a>
+<br><br>
+To verify CSS:
+<br>
+<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">The validator for CSS can be found here.</a>
+<br>		
+		</div>
+<br><br>
+
+		<div class="project">
+			<b><u>Project Requirements:</u></b>
+<br><br>
+        <em>Understanding of Structured Documents: Your notes should demonstrate an understanding of what it means for computer code to be "structured.":
+        </em>
+<br>
+&nbsp;&nbsp;&nbsp;Computer code needs to be structured for troubleshooting purposes and readability. If all my code was just thrown on one line, it would be nearly impossible to go back and fix little mistakes while putting my page together.
+<br><br>
+
+		<em>The Importance of Avoiding Repetition: Your notes should contain some explanation of why it's important to avoid repetition when coding.:</em>
+<br>
+&nbsp;&nbsp;&nbsp;It is important to user CSS and inheritant properties to save me time and writing unnecessary code. It also loads faster web pages by users and saves money on bandwidth and development costs. 
+		</div>
+<br>
+ <font color="white"><u>STAGE TWO: Automate Your Web Page</u></font>
+ <br><br>
+			<div class="lessonX lesson1">
+<b><u>Introduction to "Serious" Programming</u>
+</b><br><br>
+<em>Reflect: Summarize what you Learned:</em>
+<br>
+Hidden in these two sentences are examples of 3 of the 5 ways you can think like a programmer:
+<br>     <font color="blue">
+&nbsp;&nbsp;&nbsp;"The programs you'll write in this class will be Python code. Those will be input to another program which is a Python interpreter that follows the instructions in your code and it does that by following the instruction in its code... and you'll be able to run all that using your web browser."</font>
+<br><br>
+-The line "...follows the instructions in your code..." references the procedural thinking required of programmers.
+<br>
+-The entire quote demonstrates a deep technological empathy (which you don't need to have at this point) for how computers and programs work.
+<br>
+-When Dave thinks of a Python program, a Python interpreter, and a web browser as different versions of the same thing (a computer program) he's showing abstract thinking.
+<br><br>
+The reasons for programming language are: 
+<br>
+&nbsp;&nbsp;&nbsp;<em>ambiguity</em>- Biweekly can be interpreted differently
+<br>
+&nbsp;&nbsp;&nbsp;<em>verbosity</em>- Python can be super precise in only a few lines		
+<br><br>
+<u>Python Programming Language</u> is an interpreter.
+<br><br>
+<em><b>"print"</b></em> is python command that prints something out:
+<br><br>
+print 3
+<br>print 2+264
+<br>print 52 * 3 +12 * 9
+<br>print 52 8 (3 + 12) * 9
+<br><br>
+<em>will show:</em>
+<br>3
+<br>4
+<br>264
+<br>7020	
+<br><br>
+			</div>
+<br><br>
+			<div class="lessonX lesson2">
+		      <u><b>Variables and Strings:</b></u>
+<br><br>
+<b>Variables</b>-The equal sign means assignment, not equal to.
+<br><Br>
+			<em><u>Examples:</u></em>
+				<br><br>
+speed_of_light = 299792458
+<br>print speed_of_light
+<br>shows:	299792458
+
+<br><br>
+speed_of_light = 299792458<br>
+billionth = 1.0 / 1000000000<br>
+nanostick = speed_of_light * billionth * 100<br>
+print nanostick<br>
+shows:	29.9792458
+
+<br><br>
+
+# anything on a line after a hashtag, is not interpreted by Python
+<br><br>
+			<em><u>Examples:</u></em>
+				<br><br>
+speed_of_light = 299792458 <b># meters per second</b><br>
+cycles_per_second = 2700000000.0 <b># 2.7 ghz </b>
+				<br>
+cycle_distance = speed_of_light / cycles_per_second<br>
+print cycle_distance	
+<br><br><br>
+<b>Strings</b>-	'i am a string'  or "i am a string"
+<br><br>
+
+"string" + "string" will concatinate the strings. (it won't add a space)
+so<br><br>
+ "hello" + "ryan"<br>
+ will show:<br>
+ <em>helloryan</em> -if you don't add a space in the string.</font><br><br>
+You <font color=red>CAN NOT </font>add strings and intergers together:<br>
+print "ryan is " + 9  -will error out
+<br><br>
+You  <font color=red>CAN</font> multiply strings and intergers though:<br>
+print "ryan" * 9<br>
+will show:<br>
+<em>ryanryanryanryanryanryanryanryanryan</em>
+<br><br><br>
+<b>String Indexing-</b>
+<br><br>
+name= "Andy"<br>
+print name[0]<br>
+print name[1]<br>
+print name[2]<br>
+print name[3]<br>
+<br>
+will show:<br>
+<em>
+	A<br>
+	n<br>
+	d<br>
+	y<br>
+</em>	
+<br>
+
+print name[-1]  -negative number will count from the back of the string<br>
+<br><br>
+<b>Selecting sub-sequences-</b><br>
+<br>
+print name[start:stop] -It's actually stop -1 because it won't show the stop character.<br>
+<br>
+<u><em>Examples:</em></u><br>
+<br>
+Imagine you wanted to write code that extracted the text from an HTML div...<br>
+
+&nbsp;&nbsp;&nbsp;html_div = "&lt;div&gt;This is some text&lt;/div&gt;"
+<br>
+&nbsp;&nbsp;&nbsp;div_tex = html_div[5:-6]<br>
+&nbsp;&nbsp;&nbsp;print div_text<br>
+will show:<br>
+
+<em>This is some text</em><br>
+<br>
+
+Write code that prints out Udacity with a capital U:<br>
+ 
+&nbsp;&nbsp;&nbsp;s = "audacity"<br>
+&nbsp;&nbsp;&nbsp;print 'U' + s[2: ]<br>
+
+will show:<br>
+<em>Udacity</em>
+<br><br>
+
+<b>Finding strings in strings-</b>
+<br><br>
+string.find (search-string)  -- number that gives first position in search string where the target string is found.
+ <br>
+-if target string is not found, it will give -1
+<br><br>
+<em>Examples:</em><br>
+<br>
+string = "Ryan's test was his best test ever!"<br>
+string.find("test" , 12)   -this will find the second occurence of the word, "test".
+<br><br>
+print "Example 1: using find to print the second occurrence of a sub-string"<br>
+print "test".find("t")<br>
+print "test".find("t", 1)<br>
+0<br>
+3<br><br>
+
+print "Example 2: using a variable to store first location"<br>
+first_location = "test".find("t") # here we store the first location of "t"<br>
+print "test".find("t", first_location+1) # then we use that location to find the second occurrence.<br>
+3
+<br><br>
+print "Example 3: using find to get rid of exclamation marks!!"<br>
+example = "Wow! Python is great! Don't you think?"<br>
+first = example.find('!')<br>
+second = example.find('!', first + 1)<br>
+new_string = example[:first] + example[first+1:second] + 
+<br>
+example[second+1:]<br>
+print new_string # oops, I should probably replace the !s periods<br>
+new_string = example[:first] +'.'+ example[first+1:second] +'.'+ example[second+1:]<br>
+print new_string<br>
+Wow Python is great Don't you think?<br>
+Wow. Python is great. Don't you think?<br>
+
+<br><br>
+
+&nbsp;&nbsp;&nbsp;In addition to using single quotes (') or double quotes (") to create a string, you can also use TRIPLE quotes to create a multi-line string.<br>
+<br>
+print """I am a string<br> 
+that takes up <br>
+multiple lines"""<br>
+<br>
+print '''I am also a string<br>
+that makes up multiple lines!'''<br>
+
+
+			</div>
+<br><br>
+			<div class="lessonX lesson3">
+		<em><u><b>Input--&gt; Function--&gt; Output:</b></u></em>
+<br><br>
+<b>Functions-</b> (or python "procedures", as Dave calls them)
+<br><br>
+<em>Examples:</em><br><br>
+
+def say_hello(name):<br>
+&nbsp;&nbsp;&nbsp;    greeting = "Hello " + name + '!'<br>
+&nbsp;&nbsp;&nbsp;    return greeting<br>
+<br>
+In the code below, the add_two_numbers function has two parameters. This function adds the two inputs. <br><br>
+
+def add_two_numbers(number_1, number_2):<br>
+&nbsp;&nbsp;&nbsp;    return number_1 + number_2<br>
+print add_two_numbers(4, 3)<br>
+print add_two_numbers(2, 6)<br>
+print add_two_numbers(0, 9)<br>
+<br>
+This code will subtract the two numbers entered.<br><br>
+def subtract_two_numbers(number_1, number_2):<br>
+    &nbsp;&nbsp;&nbsp;return number_1 - number_2<br>
+print subtract_two_numbers(4, 3)
+<br><br>
+<b>Work Session: <em>Questions to Consider-</em></b><br>
+<br>
+<ul>
+<li>What is a function (Dave calls them "procedures")?<br>
+&nbsp;&nbsp;&nbsp; <em>A set of instructions that perform some kind of computing.</em><br>
+<br>
+<li>What is the difference between making and using a function?<br>
+&nbsp;&nbsp;&nbsp; <em>Making a function is when you define what you want the computer to do with input that it is given. Using the function is when you actually give it input to run the instructions on.</em><br>
+<br>
+<li>How do functions help programmers avoid repetition?<br>
+&nbsp;&nbsp;&nbsp; <em>You can avoid repetition by calling on an already defined function in your code to do certain computing.</em><br>
+<br>
+<li>What happens if a function doesn't have a return statement?<br>
+&nbsp;&nbsp;&nbsp; <em>If it doesn't have a return statement, no output will be provided, and all computing/calculations will end within the function itself.</em><br>
+</ul>
+
+			</div>
+<br><br>
+			<div class="lessonX lesson4">
+		<em><u><b>Decisions and Repetition: "If" and "While":</b></u></em>
+<br><br>
+This is an example of a "While Loop":<br>
+	<font color=blue>
+counter = 0<br>
+while counter < 10:<br>
+&nbsp;&nbsp;&nbsp;    
+    print counter<br>
+&nbsp;&nbsp;&nbsp;
+    counter = counter + 1<br>
+	</font>
+<br>    
+This is a function that uses 'if' and 'else' to modify the behavior of the function based on what the input is.<br>
+	<font color=blue>
+def pluralize(word):<br>
+&nbsp;&nbsp;&nbsp;
+    last_letter = word[-1]<br>
+&nbsp;&nbsp;&nbsp;
+    if last_letter == 'y': # note the double equals sign<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        new_word = word[:-1] + 'ies'<br>
+&nbsp;&nbsp;&nbsp;
+    else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+        new_word = word + 's'<br>
+&nbsp;&nbsp;&nbsp;
+    return new_word<br>
+	</font>
+<br>
+print pluralize('daisy') -will show daisies<br>
+print pluralize('rock') -will show rocks<br>
+<br><br>
+
+
+
+&nbsp;&nbsp;&nbsp;<b><em>Making Decisions:</em></b><br>
+<br>
+
+The equality comparison is done using == instead of = because the = means assignment.<br>
+<br>
+Boolean value: TRUE or FALSE<br>
+<br> 
+<em>Examples:)</em><br>
+
+print 2 < 3<br>
+True<br>
+<br>
+print 21 < 3<br>
+False<br>
+<br>
+print 7 * 3 < 21<br>
+False<br>
+<br>
+print 7 * 3 != 21<br>
+False<br>
+<br>
+print 7 * 3 == 21<br>
+True<br>
+<br><br>
+
+&nbsp;&nbsp;&nbsp;<em><b>IF:</b></em>
+
+<br><br>
+
+<font color=blue>
+if 3 < 5:<br>
+&nbsp;&nbsp;&nbsp;print "Three is definitely smaller than 5!"<br>
+if 10 > 20:<br>
+&nbsp;&nbsp;&nbsp;print "Did you know that 10 is greater than 20!?"<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;print "20 is greater than 10"<br>
+</font>
+
+<br><br>
+<em><u>Syntax:</u></em><br>
+if test_expression:<br>
+&nbsp;&nbsp;&nbsp;block<br>
+<br>
+
+def absolute(x):<br>
+&nbsp;&nbsp;&nbsp;if x < 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = -x<br>
+&nbsp;&nbsp;&nbsp;return x
+<br><br>
+
+<em><u>Quiz:</u></em><br>
+
+Define a procedure, bigger, that takes in two numbers as inputs, and returns the greater of the two inputs.<br>
+<br>
+	<font color="blue">
+def bigger(a,b):<br>
+&nbsp;&nbsp;&nbsp;if a > b:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else: <br>
+&nbsp;&nbsp;&nbsp;return b<br>
+	</font>
+<br>
+<em><u>Quiz:</u></em><br>
+
+Define a procedure, is_friend, that takes
+a string as its input, and returns a
+Boolean indicating if the input string
+is the name of a friend. Assume
+I am friends with everyone whose name
+starts with either 'D' or 'N', but no one
+else. You do not need to check for
+lower case 'd' or 'n'<br>
+<br>
+	<font color="blue">
+def is_friend(name):		<br>
+&nbsp;&nbsp;&nbsp;    if name[0] == "D": 		<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return true 		<br>
+&nbsp;&nbsp;&nbsp;    if name[0] == "N":		<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return true 		<br>
+&nbsp;&nbsp;&nbsp;    else: 					<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return false 		<br>
+    </font>
+<br>
+print is_friend('Diane')<br>
+True<br>
+print is_friend('Ned')<br>
+True<br>
+print is_friend('Moe')<br>
+False<br>
+
+<br><br>
+&nbsp;&nbsp;&nbsp;<em><b>OR:</b></em>
+<br><br>
+
+(expression) or (expression)<br>
+-If the first expression evaluates to True, the value is True and the second expression is not evaluated. If the first expression evaluates to false, the value is the value of the second expression.<br>
+<br>
+<em><u>Quiz:</u></em><br>
+
+Define a procedure, biggest, that takes three
+numbers as inputs and returns the largest of
+those three numbers.<br>
+<br>
+	<font color="blue">
+def biggest(a,b,c):<br>
+&nbsp;&nbsp;&nbsp;    if a > b:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if a > c:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	    return a<br>
+&nbsp;&nbsp;&nbsp;	else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	    return c<br>
+&nbsp;&nbsp;&nbsp;   else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if b > c:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    	    return b<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            return c<br>
+	</font>
+<br>
+print biggest(3, 6, 9)<br>
+9<br>
+print biggest(6, 9, 3)<br>
+9<br>
+print biggest(9, 3, 6)<br>
+9<br>
+print biggest(3, 3, 9)<br>
+9<br>
+print biggest(9, 3, 9)<br>
+9<br>
+<br>
+
+There is a built in operator for this called "<em>max</em>".<br>
+
+<b>return max(a,b,c)</b><br>
+<br>
+
+Arithmetic, comparisons, procedures(functions), if:else can write every possible computer program, theoretically.<br>
+
+<br><br>
+
+&nbsp;&nbsp;&nbsp;<em><b>While Loops:</b></em>
+
+<br><br>
+<em><u>Syntax:</u></em><br>
+	<font color="blue">
+while test-expression<br>
+&nbsp;&nbsp;&nbsp;	block<br>
+	</font>
+<br>
+-while test-expression is true, it runs the block and starts over.<br>
+	<font color="blue">
+<br>
+i = 0<br>
+while i < 10:<br>
+&nbsp;&nbsp;&nbsp;	print i<br>
+&nbsp;&nbsp;&nbsp;	i = i+1<br>
+	</font>
+0<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+<br>
+
+<em><u>Quiz:</u></em><br>
+	<font color="blue">
+i = 0<br>
+while i != 10:<br>
+&nbsp;&nbsp;&nbsp;	i = i + 1<br>
+&nbsp;&nbsp;&nbsp;	print i<br>
+	</font>
+
+-This will print out the nubmers from 1 to 10<br>
+<br>
+	<font color="blue">
+i = 1<br>
+while i != 10:<br>
+&nbsp;&nbsp;&nbsp;	i = i + 2<br>
+&nbsp;&nbsp;&nbsp;	print i <br>
+	</font>
+-This will run forever, since it will never be 10. 1,3,5,7,9,11,etc.<br>
+
+<br><br>
+<em><u>Quiz:</u></em><br>
+Define a procedure, print_numbers, that takes as input a positive whole number, and prints out all the whole numbers from 1 to the input number.<br>
+<br>
+	<font color="blue">
+
+def print_numbers(n):<br>
+&nbsp;&nbsp;&nbsp;    i=0<br>
+&nbsp;&nbsp;&nbsp;    while i < n:<br>
+&nbsp;&nbsp;&nbsp;	i = i + 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        print i<br>
+	</font>
+
+print print_numbers(3)<br>
+1<br>
+2<br>
+3<br>
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp;<b><em>Break statement:</em></b> To tell the while loop to STOP!<br>
+<br>	<font color="blue">
+while test_expression:<br>
+&nbsp;&nbsp;&nbsp;	block<br>
+&nbsp;&nbsp;&nbsp;	if break_test:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		break<br>
+&nbsp;&nbsp;&nbsp;	more_block<br>
+after_while_is_done<br></font>
+
+<br>
+
+			</div>
+<br><br>
+			<div class="lessonX lesson5">
+		<em><u><b>Structured Data: Lists and "For" Loops:</b></u></em>
+<br><br>
+<b>Structured Data:</b>
+<br>
+<em><u>STRING</u></em> - sequence of characters<br>
+s = 'yabba!'<br>
+s[0] - 'y'<br>
+s[2:4] - 'bb'<br>
+<br><br>
+
+<em><u>LIST</u></em>  - sequence of anything<br>  
+p = ['y','a','b','b','a','!']<br>
+p[0] - 'y'<br>
+p[2:4] - ['b','b']<br>
+<br>
+The grammar is &lt;list&gt; --&gt; [&lt;expression&gt;,&lt;expression&gt;,...]<br>
+<em>Example: </em><br>
+stooges = ['Moe','Larry','Curly']<br>
+<br>
+<em>Example: </em><br>
+<font color="blue">
+days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]<br>
+def how_many_days(month)<br>
+	return days_in_month[month -1]</font><br>
+print how_many_days(9)<br>
+30<br>
+<br>
+-Every entry in the following list is itself a list: (note the red brackets):<br>
+<br>
+nested_list = <font color="red">[</font>['HTML', 'Hypertext Markup Language forms the structure of webpages'],<br>
+ ['CSS' , 'Cascading Style Sheets give pages style'],<br>
+ ['Python', 'Python is a programming language'],<br>
+ ['Lists', 'Lists are a data structure that let you organize information']<font color="red">]</font><br>
+<br>
+<br>
+<em><u>Nested Lists:</u></em> Lists inside of lists.<br>
+<br>
+beatles = [['John', 1940], ['Paul', 1942],<br>
+ ['George', 1943], ['Ringo', 1940]]<br>
+<br>
+print beatles[3]<br>
+['Ringo', 1940]<br>
+<br>
+print beatles[3][0]<br>
+Ringo<br>
+<br>
+<br>
+<b><u>Mutation and Aliasing:</u></b> Mutations can alter lists without redefining them.<br>
+<br>
+p = ['H','e','l','l','o']<br>
+p[0] = 'Y' - this changes the first element of p, rather than assigning the whole thing over<br>
+<br>
+<br>
+<b><u>List operations:</u></b> <br>
+<br>
+&nbsp;&nbsp;&nbsp;<b>append</b><br>
+<br>
+mylist.append (ELEMENT)<br>
+<br>
+stooges = ['Moe','Larry','Curly']<br>
+<br>
+stooges.append ('Shemp') --&gt;will add 'Shemp' to the end of the stooges list.<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;<b>+ (concatenate)</b><br>
+<br>
+list + list<br>
+<br>
+[0,1] + [2,3] will be [0,1,2,3]<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;<b>len</b> (stands for length)<br>
+<br>
+len(list)<br>
+ len([0,1]) will be 2<br>
+ len(['a',['b',['c']]]) will be 2 also because a list within a list is counted only as one element <br>
+ len("Udacity") will be 7<br>
+<br>
+<br>
+<em><u>Quiz:</u></em><br>
+What is the value of len(p) after running:<br>
+p=[1,2]<br>
+q=[3,4]<br>
+p.append(q)<br>
+len(p) is 3 because the q is a list appended on. Len sees it as just one element. [1,2,[3,4]]<br>
+<br>
+<br>
+<br>
+<b><u><em>Focus checkpoint:</b></u></em><br>
+<ul>
+<br>
+<li>Structured data:<br>
+&nbsp;&nbsp;&nbsp; <em>Structured data is data that is neatly organized, usually in lists, that are easily manipulated, added to, changed, entered in, pulled from, etc.</em><br>
+<li>Mutability:<br>
+&nbsp;&nbsp;&nbsp; <em>	This refers to being able to change an element in a list, without having to redefine the whole list again with an assignment (=).</em><br>
+<li>The difference between append and +:<br>
+&nbsp;&nbsp;&nbsp; <em> Append adds on an actual element to an existing list, where as "+" is more of a concatenation of the contents of 2 or more lists' elements together.</em><br>
+<br>
+<br>
+		</div>
+		<br><br>
+		<div class="lessonX lesson1">
+
+<b><em><u>FOR Loops:</u></em></b><br>
+<br>
+<u>syntax:</u><br>
+<font color="blue">for name in list<br>
+ block</font><br>
+<br>
+def print_all_elements(p):<br>
+&nbsp;&nbsp;&nbsp; for e in p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print e<br>
+<br>
+<br>
+<br>
+<br>
+print "EXAMPLE 1: We can use for loops to go through a list of strings"<br>
+example_list_1 = ['a', 'b', 'c', 'd']<br>
+&nbsp;&nbsp;&nbsp;for thing in example_list_1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print thing<br>
+ <br>
+<br>
+print "EXAMPLE 2: We can use for loops on nested lists too!"<br>
+example_list_2 = [['China', 'Beijing'],<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['USA' , 'Washington D.C.'],<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['India', 'Delhi']]<br>
+&nbsp;&nbsp;&nbsp;for country_with_capital in example_list_2:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;country = country_with_capital[0]<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;capital = country_with_capital[1]<br>
+ print capital + ' is the capital of ' + country<br>
+<br>
+<br>
+This function displays the sum of all the numbers provided:<br>
+<font color="blue">
+def sum_list(p):<br>
+&nbsp;&nbsp;&nbsp;result = 0<br>
+&nbsp;&nbsp;&nbsp;for e in p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = result + e<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result<br>
+</font>
+print sum_list([1, 7, 4])<br>
+ 12<br>
+<br>
+<br>
+This function takes as its input a list of strings, and returns a number that is a count of the number of elements in the input
+list that start with the uppercase letter 'U'.<br>
+<br>
+<font color="blue">
+def measure_udacity(p):<br>
+&nbsp;&nbsp;&nbsp; results = 0<br>
+&nbsp;&nbsp;&nbsp; for e in p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if e[0] == 'U':<br>
+&nbsp;&nbsp;&nbsp; results = results + 1<br>
+&nbsp;&nbsp;&nbsp; return results<br>
+</font>
+print measure_udacity(['Dave','Sebastian','Katy'])<br>
+ 0<br>
+print measure_udacity(['Umika','Umberto'])<br>
+ 2<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;<b>index </b> -makes it easier to show the position in the list where a value occurs.<br>
+<br>
+mylist.index (value)<br>
+<br>
+-if value is in the list, returns the first position where value is found in list. Otherwise, produces an error.<br>
+<br>
+value in list<br>
+-if value is in the list, output will be "True". Otherwise output is "False".<br>
+<br>
+value not in list<br>
+-will return the opposite of value in list<br>
+<br>
+<br>
+<em><u>Quiz:</u></em><br>
+<br>
+ Define a procedure, find_element,
+ using index that takes as its
+ inputs a list and a value of any
+ type, and returns the index of
+ the first element in the input
+ list that matches the value.<br>
+<br>
+ If there is no matching element,<br>
+ return -1.<br>
+<br>
+<font color="blue">
+def find_element(p,v):<br>
+&nbsp;&nbsp;&nbsp; if v in p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return p.index(v)<br>
+&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;return -1<br>
+</font>
+print find_element([1,2,3],3)<br>
+2<br>
+print find_element(['alpha','beta'],'gamma')<br>
+-1<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;<b> appending / adding / += </b><br>
+<br>
+<br>
+<em><u>Quiz:</u></em><br>
+<br>
+Define a procedure, product_list,
+ that takes as input a list of numbers,
+ and returns a number that is
+ the result of multiplying all
+ those numbers together.<br>
+<br>
+<font color="blue">
+def product_list(list_of_numbers):<br>
+ &nbsp;&nbsp;&nbsp;total=1<br>
+ &nbsp;&nbsp;&nbsp;for i in list_of_numbers:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total = total * i<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return total<br>
+</font>
+print product_list([9])<br>
+ 9<br>
+print product_list([1,2,3,4])<br>
+ 24<br>
+print product_list([])<br>
+ 1<br>
+<br>
+<br>
+<em><u>Quiz:</u></em><br>
+<br>
+Define a procedure, greatest,
+ that takes as input a list
+ of positive numbers, and
+ returns the greatest number
+ in that list. If the input
+ list is empty, the output
+ should be 0.<br>
+<br>
+<font color="blue">
+def greatest(list_of_numbers):<br>
+ big = 0<br>
+ &nbsp;&nbsp;&nbsp;for e in list_of_numbers:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if e > big:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;big = e<br>
+ &nbsp;&nbsp;&nbsp;return big<br>
+</font>
+print greatest([4,23,1])<br>
+ 23<br>
+print greatest([])<br>
+ 0<br>
+<br><br>
+<em><u>Quiz:</u></em><br>
+<br>
+ When you've understood the difference between the three methods,
+ write a procedure list_test which takes three lists
+ as inputs. You should mutate the first input list to
+ include 'a' as the last entry, mutate the second to include the entries 'a', 'b', 'c' and finally the last list should
+ not be mutated but a copy should be returned with the additional entry 'w'.<br>
+<br>
+<font color="blue">
+first_input = [1,2,3]<br>
+second_input = [4,5,6]<br>
+third_input = [7,8,9]<br>
+<br>
+def list_test(x,y,z):<br>
+ &nbsp;&nbsp;&nbsp;x.append('a')<br>
+ &nbsp;&nbsp;&nbsp;y.append('a')<br>
+ &nbsp;&nbsp;&nbsp;y.append('b')<br>
+ &nbsp;&nbsp;&nbsp;y.append('c')<br>
+ &nbsp;&nbsp;&nbsp;z = z + ['w']<br>
+ &nbsp;&nbsp;&nbsp;return z<br>
+</font>
+<br>
+<br>
+	</div>
+		<br><br>
+		<div class="lessonX lesson2">
+
+<b><em><u>Work Session 5 Step1: Handling a single concept</u></em></b><br>
+<br>	
+<em>Example:</em><br>
+<br>
+ In this problem, you will reuse some of the code from the 
+ previous work session to make a new function that creates
+ HTML from a list whose entries are a title and a description.
+ <br>
+ This is the "generate_concept_HTML" function from the 
+ previous work_session. You don't need to modify it 
+ (though you are welcome to change it to accomodate whatever
+ HTML structure you are using).<br>
+ <br>
+ <font color="blue">
+def generate_concept_HTML(concept_title, concept_description):<br>
+&nbsp;&nbsp;&nbsp; html_text_1 = '''<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="concept"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="concept-title"><br>
+&nbsp;&nbsp;&nbsp; ''' + concept_title<br>
+&nbsp;&nbsp;&nbsp; html_text_2 = '''<br>
+&nbsp;&nbsp;&nbsp; &lt;/div><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="concept-description"><br>
+&nbsp;&nbsp;&nbsp; ''' + concept_description<br>
+&nbsp;&nbsp;&nbsp; html_text_3 = '''<br>
+&nbsp;&nbsp;&nbsp; &lt;/div><br>
+&nbsp;&nbsp; &lt;/div>'''<br>
+ full_html_text = html_text_1 + html_text_2 + html_text_3<br>
+ return full_html_text<br>
+</font>
+<br>
+<br>
+<em>Example:</em><br>
+<br>
+ This is an example of what a concept would look like as a list.<br>
+<br>
+EXAMPLE_CONCEPT = ["Python", "Python is a programming language"]<br>
+<br>
+<font color="blue">
+def make_HTML(concept):<br>
+ &nbsp;&nbsp;&nbsp;title = concept[0]<br>
+ &nbsp;&nbsp;&nbsp;description = concept[1]<br>
+ &nbsp;&nbsp;&nbsp;html_text1 = '''<br>
+ &nbsp;&nbsp;&nbsp; &lt;div class="concept"><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="concept-title"><br>
+ &nbsp;&nbsp;&nbsp;''' + title<br>
+ &nbsp;&nbsp;&nbsp;html_text2 = '''<br>
+ &nbsp;&nbsp;&nbsp; &lt;/div><br>
+ &nbsp;&nbsp;&nbsp; &lt;div class="concept-description"><br>
+ &nbsp;&nbsp;&nbsp;''' + description<br>
+ &nbsp;&nbsp;&nbsp;html_text3 = '''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div><br>
+&nbsp;&nbsp;&nbsp; &lt;/div>'''<br>
+ generate_concept_HTML = html_text1 + html_text2 + html_text3<br>
+ return generate_concept_HTML<br>
+</font>
+ <br>
+ <br>
+<br>
+<b><em><u>Work Session 5 Step2: Handling a multiple concepts:</u></em></b><br>
+<br>
+<em>Example:</em><br>
+<br>
+ This function will take a list of concepts (each of which is itself a list) and will return the appropriate string of HTML. <br>
+<br>
+<font color="blue">
+def generate_concept_HTML(concept_title, concept_description):<br>
+ html_text_1 = '''<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="concept"><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="concept-title"><br>
+ &nbsp;&nbsp;&nbsp;''' + concept_title<br>
+ &nbsp;&nbsp;&nbsp;html_text_2 = '''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div><br>
+ &nbsp;&nbsp;&nbsp; &lt;div class="concept-description"><br>
+ &nbsp;&nbsp;&nbsp;''' + concept_description<br>
+ &nbsp;&nbsp;&nbsp;html_text_3 = '''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div><br>
+ &nbsp;&nbsp;&nbsp; &lt;/div>'''<br>
+ full_html_text = html_text_1 + html_text_2 + html_text_3<br>
+ return full_html_text<br>
+<br>
+</font>
+#########<br> 
+<br>
+<font color="blue">
+def make_HTML(concept):<br>
+ &nbsp;&nbsp;&nbsp;concept_title = concept[0]<br>
+ &nbsp;&nbsp;&nbsp;concept_description = concept[1]<br>
+ &nbsp;&nbsp;&nbsp;return generate_concept_HTML(concept_title, concept_description)
+ <br>
+</font>
+<br>
+EXAMPLE_LIST_OF_CONCEPTS = [ ['Python', 'Python is a Programming Language'],<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['For Loop', 'For Loops allow you to iterate over lists'],<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['Lists', 'Lists are sequences of data'] ]<br>
+<br>
+<font color="blue">
+def make_HTML_for_many_concepts(list_of_concepts):<br>
+ &nbsp;&nbsp;&nbsp;HTML = ""<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for concept in list_of_concepts:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;concept_HTML = make_HTML(concept)<br>
+ &nbsp;&nbsp;&nbsp;HTML = HTML + concept_HTML<br>
+ &nbsp;&nbsp;&nbsp;return HTML<br>
+</font>
+print make_HTML_for_many_concepts(EXAMPLE_LIST_OF_CONCEPTS)<br>
+<br>
+
+			</div>
+<br><Br>
+			<div class="lessonX project">
+		<em><u><b>Stage 2 Project:</b></u></em>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;I have submitted my python code file along with my HTML and CSS files.<br>
+			</div>
+	</body>
+</html>

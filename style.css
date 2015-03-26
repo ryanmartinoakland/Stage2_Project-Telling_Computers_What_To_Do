@@ -1,0 +1,55 @@
+
+.description {
+	max-width: 705px; margin-left: 30px;
+	color: #7C8B88
+}
+.app {
+	display:flex
+}
+.whole-page {
+	background-color: rgb(92, 87, 87)
+}
+.img1 {
+    float: left; margin-right: 100px
+}
+.title {
+	background-color: #770922;
+	color: white;
+ 	padding-top: 27px
+}
+.lessonX {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+
+.lesson1 {
+	background-color: rgb(206, 244, 206);
+}
+
+.lesson2 {
+	background-color: rgb(244, 244, 188);
+}
+
+.lesson3 {
+	background-color: rgb(245, 149, 121);
+	}
+
+.lesson4 {
+	background-color: rgb(194, 214, 245);
+}
+
+.lesson5 {
+	background-color: white
+}
+
+.project {
+	background-color: red;
+	color:white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	margin-bottom: 50px
+}
+
+
